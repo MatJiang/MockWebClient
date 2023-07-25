@@ -1,0 +1,2 @@
+# MockWebClient
+模擬User隨意瀏覽Sitecore網站觸發Interaction收集
