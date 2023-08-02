@@ -44,7 +44,8 @@ public class BrowseRepository
     {
         Logger.Information($"使用者 {count} 人");
         var chromeOption = new ChromeOptions();
-        chromeOption.AddArgument("ignore-certificate-errors");
+
+        chromeOption.AddExcludedArguments("ignore-certificate-errors", "--headless=new");
         for (int i = 0; i < count; i++)
         {
             using (var client = new MockClient(new ChromeDriver(chromeOption), Logger))
